@@ -3,18 +3,17 @@ import carsService from "../Services/CarsService.js";
 
 // private
 function _drawCars() {
-  let cars = ProxyState.cars
-  let templates = ''
-  cars.forEach(c => templates += c.Template)
-  document.getElementById('data').innerHTML = templates
+  let cars = ProxyState.cars;
+  let templates = "";
+  cars.forEach((c) => (templates += c.Template));
+  document.getElementById("data").innerHTML = templates;
 }
-
 
 //Public
 export default class CarsController {
   constructor() {
-    // NOTE Add all Listeners   
-    ProxyState.on('cars', _drawCars)
+    // NOTE Add all Listeners
+    ProxyState.on("cars", _drawCars);
 
     // NOTE Get all appropriate data
     this.getCars();
@@ -25,14 +24,13 @@ export default class CarsController {
     try {
       carsService.getCars();
     } catch (error) {
-      console.error(error)
+      console.error(error);
     }
   }
 
-
   createCar() {
     event.preventDefault();
-    let form = event.target
+    let form = event.target;
     let rawCar = {
       // @ts-ignore
       make: form.make.value,
@@ -45,30 +43,28 @@ export default class CarsController {
       // @ts-ignore
       description: form.description.value,
       // @ts-ignore
-      imgUrl: form.img.value
-    }
+      imgUrl: form.img.value,
+    };
     try {
-      carsService.createCar(rawCar)
+      carsService.createCar(rawCar);
     } catch (error) {
-      console.error(error)
+      console.error(error);
     }
   }
 
   removeCar(id) {
     try {
-      carsService.removeCar(id)
+      carsService.removeCar(id);
     } catch (error) {
-      console.error(error)
+      console.error(error);
     }
   }
 
   bid(id) {
     try {
-      carsService.bid(id)
+      carsService.bid(id);
     } catch (error) {
-      console.error(error)
+      console.error(error);
     }
   }
-
-
 }
