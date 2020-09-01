@@ -10,7 +10,7 @@ export default class Job {
 
   get Template() {
     return `
-    <p>${this.id}
+    <p>${this.company}</p>
     `;
   }
 }
