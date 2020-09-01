@@ -3,8 +3,10 @@ import Job from "../Models/Job.js";
 import { api } from "../Services/AxiosService.js";
 
 class JobsService {
-  createJob(newJob) {
-    throw new Error("Method not implemented.");
+  async createJob(newJob) {
+    let jobsResults = await api.post("jobs", newJob);
+    let job = new Job(jobsResults.data.data);
+    ProxyState.jobs = [...ProxyState.jobs, job];
   }
   async getJobs() {
     let jobResults = await api.get("jobs");
