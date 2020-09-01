@@ -19,7 +19,7 @@ export default class JobsController {
     try {
       jobsService.getJobs();
     } catch (error) {
-      console.error("error");
+      console.error(error);
     }
   }
 
@@ -41,6 +41,14 @@ export default class JobsController {
     };
     try {
       jobsService.createJob(newJob);
+    } catch (error) {
+      console.error(error);
+    }
+  }
+
+  removeJobPosting(id) {
+    try {
+      jobsService.removeJob(id);
     } catch (error) {
       console.error(error);
     }

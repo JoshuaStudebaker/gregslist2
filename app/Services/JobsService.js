@@ -3,6 +3,10 @@ import Job from "../Models/Job.js";
 import { api } from "../Services/AxiosService.js";
 
 class JobsService {
+  async removeJob(id) {
+    await api.delete(`jobs/${id}`);
+    ProxyState.jobs = ProxyState.jobs.filter((j) => j.id !== id);
+  }
   async createJob(newJob) {
     let jobsResults = await api.post("jobs", newJob);
     let job = new Job(jobsResults.data.data);

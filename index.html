@@ -142,7 +142,7 @@
       </section>
       <section id="jobs-display" class="d-none">
         <div class="row my-3">
-          <div class="col" id="form">
+          <div class="col bg-gray shadow" id="form">
             <form onsubmit="app.jobsController.createJob()" class="form-inline">
               <div class="form-group p-1">
                 <label class="mr-1" for="jobTitle">Job Title</label>
@@ -199,13 +199,13 @@
                 />
               </div>
 
-              <button type="submit" class="btn btn-outline-success">
+              <button type="submit" class="btn btn-outline-light">
                 Add Job
               </button>
             </form>
           </div>
         </div>
-        <div class="row" id="jobs"></div>
+        <div class="row justify-content-around" id="jobs"></div>
       </section>
     </main>
     <footer class="container-fluid bg-dark text-light">
