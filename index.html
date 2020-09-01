@@ -140,71 +140,73 @@
         </div>
         <div class="row" id="data"></div>
       </section>
-      <section id="jobs-display" class="d-none">
-        <div class="row my-3 bg-gray shadow py-2">
-          <div class="col" id="form">
-            <form
-              onsubmit="app.jobsController.createJob()"
-              class="form-inline row"
-            >
-              <div class="form-group p-1 col-4">
-                <input
-                  type="text"
-                  name="jobTitle"
-                  id="jobTitle"
-                  class="form-control"
-                  placeholder="Job Title..."
-                  required
-                />
-              </div>
-              <div class="form-group p-1 col-4">
-                <input
-                  type="text"
-                  name="company"
-                  id="company"
-                  class="form-control"
-                  placeholder="Company..."
-                  required
-                />
-              </div>
-              <div class="form-group p-1 col-4">
-                <input
-                  type="number"
-                  name="rate"
-                  id="rate"
-                  class="form-control"
-                  placeholder="Rate..."
-                  required
-                />
-              </div>
-              <div class="form-group p-1 col-4">
-                <input
-                  type="number"
-                  name="hours"
-                  id="hours"
-                  class="form-control"
-                  placeholder="Hours..."
-                  required
-                />
-              </div>
-              <div class="form-group p-1 col-4">
-                <input
-                  type="text"
-                  name="description"
-                  id="description"
-                  class="form-control"
-                  placeholder="Description..."
-                />
-              </div>
-              <div class="col-4 d-flex justify-content-end">
-                <button type="submit" class="btn btn-outline-light">
-                  Add Job
-                </button>
-              </div>
-            </form>
+      <section id="jobs-display" class="d-none row">
+        <div class="col-12">
+          <div class="row my-3 bg-gray shadow py-2">
+            <div class="col" id="form">
+              <form
+                onsubmit="app.jobsController.createJob()"
+                class="form-inline row"
+              >
+                <div class="form-group p-1 col-4">
+                  <input
+                    type="text"
+                    name="jobTitle"
+                    id="jobTitle"
+                    class="form-control"
+                    placeholder="Job Title..."
+                    required
+                  />
+                </div>
+                <div class="form-group p-1 col-4">
+                  <input
+                    type="text"
+                    name="company"
+                    id="company"
+                    class="form-control"
+                    placeholder="Company..."
+                    required
+                  />
+                </div>
+                <div class="form-group p-1 col-4">
+                  <input
+                    type="number"
+                    name="rate"
+                    id="rate"
+                    class="form-control"
+                    placeholder="Rate..."
+                    required
+                  />
+                </div>
+                <div class="form-group p-1 col-4">
+                  <input
+                    type="number"
+                    name="hours"
+                    id="hours"
+                    class="form-control"
+                    placeholder="Hours..."
+                    required
+                  />
+                </div>
+                <div class="form-group p-1 col-4">
+                  <input
+                    type="text"
+                    name="description"
+                    id="description"
+                    class="form-control"
+                    placeholder="Description..."
+                  />
+                </div>
+                <div class="col-4 d-flex justify-content-end">
+                  <button type="submit" class="btn btn-outline-light">
+                    Add Job
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
+          <div class="row justify-content-around" id="jobs"></div>
         </div>
-        <div class="row justify-content-around" id="jobs"></div>
       </section>
     </main>
     <footer class="container-fluid bg-dark text-light">
