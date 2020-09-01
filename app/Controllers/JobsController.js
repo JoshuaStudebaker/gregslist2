@@ -1,6 +1,5 @@
 import { ProxyState } from "../AppState.js";
 import jobsService from "../Services/JobsService.js";
-import Job from "../Models/Job.js";
 
 function _drawJobs() {
   let template = "";
