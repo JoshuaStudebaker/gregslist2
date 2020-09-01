@@ -67,4 +67,10 @@ export default class CarsController {
       console.error(error);
     }
   }
+  displayCars() {
+    let element = document.getElementById("car-display");
+    element.classList.remove("d-none");
+    let elem2 = document.getElementById("jobs-display");
+    elem2.classList.add("d-none");
+  }
 }
